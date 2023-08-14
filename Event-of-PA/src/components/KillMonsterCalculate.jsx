@@ -1,11 +1,21 @@
-export default function KillMonsterCalculate ({ totalPointsRegister, quantityOfPaForMonster }) {
+import React,{ useEffect, useState } from "react";
+
+export default function KillMonsterCalculate ({ totalPointsRegister, updateResults  }) {
+    const quantityOfPaForMonster = [8, 9, 10, 16, 18, 20]  
+
+
+
     const typeOfHero = ['Hero with 20% REDUCE of ', 'Hero with 10% REDUCE of ', 'Normal', 'Hero with 10% REDUCE of', 'Hero with 20% REDUCE of', 'Normal'];
-    const killCalculate = () => {
-       return quantityOfPaForMonster.map(element => Math.floor(totalPointsRegister / element))
-    }
+    const [results, setResults] = useState([])
 
-    const results = killCalculate()
+    useEffect(() => {
+        const calculateResults = (quantityOfPaForMonster.map(element => Math.floor(totalPointsRegister / element)))
 
+        setResults(calculateResults)   
+        updateResults(calculateResults);
+
+    },[totalPointsRegister]) 
+    
 
     return(
         <div className="w-full h-full flex flex-col align-center bg-slate-300 border border-emerald-500">
@@ -38,9 +48,9 @@ export default function KillMonsterCalculate ({ totalPointsRegister, quantityOfP
 
                 <div className="">
                     <ul className="flex flex-col gap-2 justify-around h-full w-16">
-                        {quantityOfPaForMonster.map((paUsed, index) => (
+                        {results.map((result, index) => (
                         <li className="text-xs" key={index}>
-                            = {results / paUsed }
+                            = {result}
                         </li>
                         ))
 

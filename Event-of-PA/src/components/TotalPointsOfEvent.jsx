@@ -1,8 +1,5 @@
-export default function TotalPointsOfEvent({ quantityOfPaForMonster }) {
-    
-   const casesOfPoints = () =>{
-    console.log(quantityOfPaForMonster)
-   }
+export default function TotalPointsOfEvent({ totalMonsterKilled }) {
+
 
     return (
 
@@ -11,9 +8,9 @@ export default function TotalPointsOfEvent({ quantityOfPaForMonster }) {
             <div className="flex flex-row justify-center gap-4 pr-4 pb-6 pl-4">
                 <div className="p-4">
                     <ul className="flex flex-col gap-2 justify-around h-full">
-                        {quantityOfPaForMonster.map((unitOfPa) => (
-                                <li className="text-xs border border-black p-2 rounded-xl">
-                                    <p> For each Monster use: {unitOfPa} PA </p>
+                        {totalMonsterKilled.map((mosterKilled,index) => (
+                                <li className="text-xs border border-black p-2 rounded-xl" key={index}>
+                                    <p>  {index < 3 ? 'Small Mosnter 10 pts' : 'Big Mosnter 20 pts'}: {mosterKilled} PA </p>
                                 </li>
                             ))}
                     </ul>
@@ -21,14 +18,16 @@ export default function TotalPointsOfEvent({ quantityOfPaForMonster }) {
 
                 <div className="p-4">
                     <ul className="flex flex-col gap-2 justify-around h-full">
-                        {quantityOfPaForMonster.map((elemnto, index) => (
-                                <li className="text-xs border border-black p-2 rounded-xl" key={index}>
-                                    <p> The scores in this case are: {casesOfPoints()} </p>
-                                </li>
+                        {totalMonsterKilled.map((elemnto, index) => (
+                            
+                            <li className="text-xs border border-black p-2 rounded-xl" key={index}>
+                            <p><b> TOTAL scores</b>in this case: { index < 3 ? elemnto * 10 : elemnto * 20 } </p>
+                            </li>
+
+                                
                             ))}
                     </ul>
                 </div>
-
             </div>
         </div>
     )
