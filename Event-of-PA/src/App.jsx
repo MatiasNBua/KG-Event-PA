@@ -28,6 +28,7 @@ function App() {
         <TotalPointsOfEvent  totalMonsterKilled={totalMonsterKilled}/>
         <SendMessageWithPoints/>
         <Toaster richColors closeButton/>
+        
       </div>
     </>
   )

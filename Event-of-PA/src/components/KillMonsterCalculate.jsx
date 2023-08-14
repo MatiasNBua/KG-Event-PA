@@ -21,7 +21,7 @@ export default function KillMonsterCalculate ({ totalPointsRegister, updateResul
         <div className="w-full h-full flex flex-col align-center bg-slate-300 border border-emerald-500">
             <h1 className="text-2xl font-bold mb-4 text-center py-6">Kill Monster Calculator</h1>
                 <h4 className="text-center pb-4">
-                    Diffentes Type of Hero`s:
+                    Diffentes Type of Hero`ss:
                 </h4>
             <div className="flex flex-row justify-center gap-4 pr-4 pb-6 pl-4">
                 <div className="P-4">
