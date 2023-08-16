@@ -34,7 +34,7 @@ export default function TotalPointsOfEvent({ totalMonsterKilled }) {
             </div>
 
             <div className="text-2xl flex justify-center p-4">
-                <p className="border border-black rounded-xl p-3"><i>Your Max Score is <b> {bestScore} </b> </i></p>
+                <p className="border border-black rounded-xl p-3"><i>Your Max Score is <b> {bestScore.toString()} </b> </i></p>
                    
             </div>
         </div>
