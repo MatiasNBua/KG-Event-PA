@@ -1,5 +1,6 @@
 export default function TotalPointsOfEvent({ totalMonsterKilled }) {
 
+    const bestScore = totalMonsterKilled[0]*10
 
     return (
 
@@ -21,13 +22,20 @@ export default function TotalPointsOfEvent({ totalMonsterKilled }) {
                         {totalMonsterKilled.map((elemnto, index) => (
                             
                             <li className="text-xs border border-black p-2 rounded-xl" key={index}>
-                            <p><b> TOTAL scores</b>in this case: { index < 3 ? elemnto * 10 : elemnto * 20 } </p>
+                            <p><b> TOTAL scores</b>in this case: { index < 3 ? elemnto * 10 : elemnto * 20 }</p>
                             </li>
 
                                 
                             ))}
                     </ul>
+
+                    
                 </div>
+            </div>
+
+            <div className="text-2xl flex justify-center p-4">
+                <p className="border border-black rounded-xl p-3"><i>Your Max Score is <b> {bestScore} </b> </i></p>
+                   
             </div>
         </div>
     )

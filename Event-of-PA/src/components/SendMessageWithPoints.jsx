@@ -54,22 +54,16 @@ export default function SendMessageWithPoints({ totalPA }) {
             <h1 className="text-2xl font-bold mb-4 text-center py-6">Send-me message with Your Score:</h1>
 
             <div className="flex flex-row justify-center gap-2 px-2">
-                <form className='w-full h-fullflex gap-2' ref={form}>
+                <form className='w-3/4 h-fullflex flex flex-col justify-center align-center gap-2' ref={form}>
                     <div className=''>
-                        <div className='flex flex-col p-2'>
-                            <label className="px-1" data-tooltip='Campo requerido' >Nombre</label>
-                            <input className="p-1" type="text" name="Nombre_in_game" placeholder='Nombre' required />
-                        </div>
-
                         <div className='flex flex-col p-2'>
                             <label className='px-1' data-tooltip='Campo requerido' >Name ID:</label>
                             <input className="p-1" type="text" name="name_id" placeholder='Your name ID' required />
                         </div>
 
-
                         <div className='flex flex-col p-2'>
                             <label className='px-1' data-tooltip='Campo requerido' >Your Message: </label>
-                            <textarea className="p-1" name="Mensaje" placeholder='Write a short text explaining how long you can last without spending your resources.' required />
+                            <textarea className="w-full h-40 p-4 resize-y border rounded-md p-1" name="Mensaje" placeholder='Write a short text explaining how long you can last without spending your resources.' required />
                         </div>
                     </div>
                     <div className="flex justify-center align-center py-4">
