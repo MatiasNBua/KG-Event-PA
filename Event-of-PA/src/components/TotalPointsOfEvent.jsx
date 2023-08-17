@@ -1,6 +1,8 @@
-export default function TotalPointsOfEvent({ totalMonsterKilled }) {
+export default function TotalPointsOfEvent({ totalMonsterKilled, setPointsForSendMessage }) {
 
     const bestScore = totalMonsterKilled[0]*10
+
+    setPointsForSendMessage(bestScore)
 
     return (
 

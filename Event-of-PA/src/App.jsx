@@ -12,6 +12,7 @@ function App() {
 
   const [totalPointsRegister, setTotalPointsRegister] = useState('')
   const [totalMonsterKilled, setTotalMonsterKilled] = useState([]);
+  const [pointsForSendMessage, setPointsForSendMessage] = useState ('')
   
   const updateMonsterKilled = (results) => {
     setTotalMonsterKilled(results);
@@ -25,8 +26,8 @@ function App() {
 
         <PointCalculator setTotalPointsRegister={setTotalPointsRegister}/>
         <KillMonsterCalculate totalPointsRegister={totalPointsRegister}  updateResults={updateMonsterKilled}/>
-        <TotalPointsOfEvent  totalMonsterKilled={totalMonsterKilled}/>
-        <SendMessageWithPoints/>
+        <TotalPointsOfEvent  totalMonsterKilled={totalMonsterKilled} setPointsForSendMessage={setPointsForSendMessage}/>
+        <SendMessageWithPoints pointsForSendMessage={pointsForSendMessage} />
         <Toaster richColors closeButton/>
         
       </div>

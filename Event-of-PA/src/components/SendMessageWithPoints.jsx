@@ -2,7 +2,7 @@ import React, { useRef } from "react"
 import emailjs from '@emailjs/browser';
 import { toast } from 'sonner';
 
-export default function SendMessageWithPoints({ totalPA }) {
+export default function SendMessageWithPoints({ pointsForSendMessage }) {
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -63,7 +63,7 @@ export default function SendMessageWithPoints({ totalPA }) {
 
                         <div className='flex flex-col p-2'>
                             <label className='px-1' data-tooltip='Campo requerido' >Your Message: </label>
-                            <textarea className="w-full h-40 p-4 resize-y border rounded-md p-1" name="Mensaje" placeholder='Write a short text explaining how long you can last without spending your resources.' required />
+                            <textarea className="w-full h-40 p-4 resize-y border rounded-md p-1" value={pointsForSendMessage.toString()}  name="Mensaje" placeholder='Write a short text explaining how long you can last without spending your resources.' required />
                         </div>
                     </div>
                     <div className="flex justify-center align-center py-4">
