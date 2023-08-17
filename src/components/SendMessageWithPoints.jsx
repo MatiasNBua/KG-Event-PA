@@ -62,8 +62,8 @@ export default function SendMessageWithPoints({ pointsForSendMessage }) {
                         </div>
 
                         <div className='flex flex-col p-2'>
-                            <label className='px-1' data-tooltip='Campo requerido' >Your Message: </label>
-                            <textarea className="w-full h-40 p-4 resize-y border rounded-md p-1" value={pointsForSendMessage.toString()}  name="Mensaje" placeholder='Write a short text explaining how long you can last without spending your resources.' required />
+                            <label className='px-1' data-tooltip='Campo requerido' >¡Envieme este mensaje con sus puntos para participar del Evento!: </label>
+                            <textarea className="w-full h-40 p-4 resize-y border rounded-md p-1" value={`Su puntaje maximo sera de: ${pointsForSendMessage.toString()}`}  name="Mensaje" placeholder='Write a short text explaining how long you can last without spending your resources.' required />
                         </div>
                     </div>
                     <div className="flex justify-center align-center py-4">
