@@ -20,7 +20,7 @@ export default function PointCalculator({ setTotalPointsRegister }) {
 
     return (
         <div className="w-full h-full flex flex-col align-center bg-slate-400 border border-emerald-600">
-            <h1 className="text-2xl font-bold mb-4 text-center py-6">Point Calculator</h1>
+            <h1 className="text-2xl font-bold mb-4 text-center py-6">Point Calculator 3</h1>
 
             <div className="flex flex-row justify-center gap-2 px-2">
                 <div className="flex justify-around">
